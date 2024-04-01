@@ -1,0 +1,364 @@
+{
+  "pinyin": [
+    {
+      "label": "a",
+      "value": [
+        "ā",
+        "á",
+        "ǎ",
+        "à"
+      ]
+    },
+    {
+      "label": "o",
+      "value": [
+        "ō",
+        "ó",
+        "ǒ",
+        "ò"
+      ]
+    },
+    {
+      "label": "e",
+      "value": [
+        "ē",
+        "é",
+        "ě",
+        "è"
+      ]
+    },
+    {
+      "label": "i",
+      "value": [
+        "ī",
+        "í",
+        "ǐ",
+        "ì"
+      ]
+    },
+    {
+      "label": "u",
+      "value": [
+        "ū",
+        "ú",
+        "ǔ",
+        "ù"
+      ]
+    },
+    {
+      "label": "u:",
+      "value": [
+        "ǖ",
+        "ǘ",
+        "ǚ",
+        "ǜ"
+      ]
+    },
+    {
+      "label": "ai",
+      "value": [
+        "āi",
+        "ái",
+        "ǎi",
+        "ài"
+      ]
+    },
+    {
+      "label": "ei",
+      "value": [
+        "ēi",
+        "éi",
+        "ěi",
+        "èi"
+      ]
+    },
+    {
+      "label": "ui",
+      "value": [
+        "ūi",
+        "úi",
+        "ǔi",
+        "ùi"
+      ]
+    },
+    {
+      "label": "ao",
+      "value": [
+        "āo",
+        "áo",
+        "ǎo",
+        "ào"
+      ]
+    },
+    {
+      "label": "ou",
+      "value": [
+        "ōu",
+        "óu",
+        "ǒu",
+        "òu"
+      ]
+    },
+    {
+      "label": "iu",
+      "value": [
+        "īu",
+        "íu",
+        "ǐu",
+        "ìu"
+      ]
+    },
+    {
+      "label": "ie",
+      "value": [
+        "īe",
+        "íe",
+        "ǐe",
+        "ìe"
+      ]
+    },
+    {
+      "label": "ue",
+      "value": [
+        "ūe",
+        "úe",
+        "ǔe",
+        "ùe"
+      ]
+    },
+    {
+      "label": "u:e",
+      "value": [
+        "ǖe",
+        "ǘe",
+        "ǚe",
+        "ǜe"
+      ]
+    },
+    {
+      "label": "er",
+      "value": [
+        "ēr",
+        "ér",
+        "ěr",
+        "èr"
+      ]
+    },
+    {
+      "label": "an",
+      "value": [
+        "ān",
+        "án",
+        "ǎn",
+        "àn"
+      ]
+    },
+    {
+      "label": "en",
+      "value": [
+        "ēn",
+        "én",
+        "ěn",
+        "èn"
+      ]
+    },
+    {
+      "label": "in",
+      "value": [
+        "īn",
+        "ín",
+        "ǐn",
+        "ìn"
+      ]
+    },
+    {
+      "label": "un",
+      "value": [
+        "ūn",
+        "ún",
+        "ǔn",
+        "ùn"
+      ]
+    },
+    {
+      "label": "u:n",
+      "value": [
+        "ǖn",
+        "ǘn",
+        "ǚn",
+        "ǜn"
+      ]
+    },
+    {
+      "label": "ang",
+      "value": [
+        "āng",
+        "áng",
+        "ǎng",
+        "àng"
+      ]
+    },
+    {
+      "label": "eng",
+      "value": [
+        "ēng",
+        "éng",
+        "ěng",
+        "èng"
+      ]
+    },
+    {
+      "label": "ing",
+      "value": [
+        "īng",
+        "íng",
+        "ǐng",
+        "ìng"
+      ]
+    },
+    {
+      "label": "ong",
+      "value": [
+        "ōng",
+        "óng",
+        "ǒng",
+        "òng"
+      ]
+    },
+    {
+      "label": "zhi",
+      "value": [
+        "zhī",
+        "zhí",
+        "zhǐ",
+        "zhì"
+      ]
+    },
+    {
+      "label": "chi",
+      "value": [
+        "chī",
+        "chí",
+        "chǐ",
+        "chì"
+      ]
+    },
+    {
+      "label": "shi",
+      "value": [
+        "shī",
+        "shí",
+        "shǐ",
+        "shì"
+      ]
+    },
+    {
+      "label": "ri",
+      "value": [
+        "rī",
+        "rí",
+        "rǐ",
+        "rì"
+      ]
+    },
+    {
+      "label": "zi",
+      "value": [
+        "zī",
+        "zí",
+        "zǐ",
+        "zì"
+      ]
+    },
+    {
+      "label": "ci",
+      "value": [
+        "cī",
+        "cí",
+        "cǐ",
+        "cì"
+      ]
+    },
+    {
+      "label": "si",
+      "value": [
+        "sī",
+        "sí",
+        "sǐ",
+        "sì"
+      ]
+    },
+    {
+      "label": "yi",
+      "value": [
+        "yī",
+        "yí",
+        "yǐ",
+        "yì"
+      ]
+    },
+    {
+      "label": "wu",
+      "value": [
+        "wū",
+        "wú",
+        "wǔ",
+        "wù"
+      ]
+    },
+    {
+      "label": "yu",
+      "value": [
+        "yū",
+        "yú",
+        "yǔ",
+        "yù"
+      ]
+    },
+    {
+      "label": "ye",
+      "value": [
+        "yē",
+        "yé",
+        "yě",
+        "yè"
+      ]
+    },
+    {
+      "label": "yue",
+      "value": [
+        "yūe",
+        "yúe",
+        "yǔe",
+        "yùe"
+      ]
+    },
+    {
+      "label": "yin",
+      "value": [
+        "yīn",
+        "yín",
+        "yǐn",
+        "yìn"
+      ]
+    },
+    {
+      "label": "yun",
+      "value": [
+        "yūn",
+        "yún",
+        "yǔn",
+        "yùn"
+      ]
+    },
+    {
+      "label": "yuan",
+      "value": [
+        "yuān",
+        "yuán",
+        "yuǎn",
+        "yuàn"
+      ]
+    }
+  ]
+}
