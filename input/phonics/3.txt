@@ -1,0 +1,7 @@
+letter|standard|type|audio|baseWords|moreWords
+a|eɪ|3|a.mp3|face,baby,date|face,baby,date,gate,lake,Kate,make,grade,fate,plane,plate,same,snake,take,grape,fake,hate
+e|i:|3|e.mp3|people,he,we|people,he,we,fever,these,me,she,be,convenient
+i|aɪ|3|i.mp3|bike,like,nice|bike,like,Mkie,kite,nice,advice,admire,alike,alliance,apologize,appetite,arrive,Bible,bite,bribe,bride,compile,comprise,concise,desire
+y|aɪ|3|u.mp3|sky,by,type|sky,by,type,my,dry,lying,nearby,rhyme,spy,shy,eye,style,type,goodbye,sly,dye,decry,skyscraper
+o|aʊ|3|o.mp3|photo,nose,home|photo,nose,home,go,joke,Pope,note,robot,hope,close,stone,clothes,broken,old,photo
+u|ju:|3|.mp3|refuse,duty,future|refuse,duty,sue,future,cute,mute,use,huge,Tuesday,duty,uterus,unit,unite,union,unique,utilise,useful,usage,usually,usurp,utopian

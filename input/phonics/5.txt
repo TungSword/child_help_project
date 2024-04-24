@@ -1,0 +1,9 @@
+letter|standard|type|audio|baseWords|moreWords
+a|ə|5|a.mp3|sofa,woman,banana|sofa,woman,banana,away,accept,among,admit,substance,breakfast,woman,vegetable,adhere,around,afraid,abuse,accuse,accustomed
+e|ə|5|e.mp3|accident,moment,accident|accident,moment,accident,open,diligent,movement,moment,arithmetic,accident
+e|ɪ|5|e_i.mp3|jacket,planet,college|jacket,planet,college,secure,prefer,ticket,kindness,college
+i|ə|5|i.mp3|April,holiday,family|April,holiday,possible,family,impossible,holiday
+i|ɪ|5|i_i.mp3|ring,sing,ticket|ring,sing,ticket,bring,English,difficult
+o|ə|5|o.mp3|police,confirm,today|police,confirm,today,political,correct,considerate,politeness,possess,potato,potential,companion,community,tomato,tobacco
+u|ə|5|u.mp3||support,suppose,difficult,minimum,injury,upon,suppose,suggest,circumstance,submit,minimum,submarine,sufficient
+

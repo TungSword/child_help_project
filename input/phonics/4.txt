@@ -1,0 +1,8 @@
+letter|standard|type|audio|baseWords|moreWords
+a|æ|4|a.mp3|family,bad,dad,gap|family,bad,dad,gap,land,mak,Nancy,Sam,fan,lamp,can,thank,map,fat,actor,cat,camel,bag,hat,man,and,active
+e|e|4|e.mp3|bell,desk,fellow|bell,desk,fellow,level,never,when,bet,pet,well,smell,tell,clever,every,help,better,west,then,yesterday
+i|ɪ|4|i.mp3|kid,bit,pig|kid,bit,pig,give,little,ink,insect,bin,pin,tin,mill,tip,build,listen,with,window,thing,think,thick
+y|ɪ|4|y.mp3|puppy,city,busy|puppy,city,busy,any,early,heavy,army,bunny,moody,lady,cloudy,candy,donkey,kitty,puppy,bankruptcy,rainy,sunny,baby,barely,beauty
+o|ɒ|4|o.mp3|clock,doctor,bottle|clock,doctor,bottle,coffee,dog,log,not,drop,shop,bottle,coffee,cross,pop,stop,dot,nod,blog,knock,fog,obligated,odd
+u|ʌ|4|u.mp3|study,but,dusk|study,but,dusk,gut,luck,mum,us,funny,bus,sunny,unknown,summer,hurry,dusk,gut,ugly,luck,uncle
+u|ʊ|4|u_o.mp3|bull,put,bullet|bull,put,bullet,full,bush,bullet,put,push

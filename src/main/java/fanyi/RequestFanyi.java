@@ -1,5 +1,6 @@
 package fanyi;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -11,12 +12,11 @@ import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
-import org.junit.Test;
+import phonics.entity.Word;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -26,24 +26,18 @@ import java.util.Locale;
  * @date: 2024/4/1
  */
 public class RequestFanyi {
-    @Test
-    public void trans() throws Exception {
-        List<String> list = FileUtils.readLines(new File("./input/englishWorld.txt"), StandardCharsets.UTF_8);
-
-        for (int i = 0; i < list.size(); i++) {
-            String word = list.get(i);
-            System.out.println(word + ":" + getTranslate(word));
-            if (i > 10){
-                return;
-            }
-        }
+    public static void main(String[] args) throws Exception {
+        System.out.println(JSON.toJSONString(getTranslate("Tibet")));
+        System.out.println(JSON.toJSONString(getTranslate("tink")));
     }
 
-    public static String getTranslate(String word) throws Exception {
+    public static Word getTranslate(String word) throws Exception {
         word = word.replaceAll(" ", "+");
         String url = "http://m.youdao.com/dict?le=eng&q=" + word;
-        CloseableHttpClient client = HttpClients.createDefault(); //创建一个可关闭的客户端
-        HttpGet hp = new HttpGet(url);//创建post方法
+        //创建一个可关闭的客户端
+        CloseableHttpClient client = HttpClients.createDefault();
+        //创建post方法
+        HttpGet hp = new HttpGet(url);
         //设置头信息
         hp.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         hp.setHeader("Accept-Encoding", "gzip, deflate");
@@ -57,66 +51,67 @@ public class RequestFanyi {
         CloseableHttpResponse response = client.execute(hp);
         HttpEntity entity = response.getEntity();
         String web = EntityUtils.toString(entity, "UTF-8");
-        //System.out.println(web);
         int i = web.indexOf("该词条暂未被收录");
         if (i == -1) {
             Document doc = Jsoup.parse(web, "utf-8");
             Elements con = doc.getElementsByTag("ul");
-
-
-            return con.get(2).text();
-        } else {
-            return "该词条暂未被收录";
-
-        }
-    }
-
-    @Test
-    public void getWords() throws IOException {
-        File path = new File("C:\\Users\\TungS\\Downloads\\Lingoes English");
-        List<String> words = new ArrayList<>();
-        for (File file : path.listFiles()) {
-            if (file.isDirectory()) {
-                for (File listFile : file.listFiles()) {
-                    String word = listFile.getName().replace(".mp3", "");
-                    words.add(word);
-                }
+            Elements phonetic = doc.getElementsByClass("phonetic");
+            String chinese = con.get(2).text();
+            int size = phonetic.size();
+            List<String> englishStandards = new ArrayList<>();
+            for (int j = 0; j < size; j++) {
+                englishStandards.add(phonetic.get(j).parent().text());
             }
+            return new Word(word, chinese, englishStandards);
+        } else {
+            return null;
+
         }
-        FileUtils.writeLines(new File("./input/englishWorld.txt"), words);
     }
 
-    @Test
-    public void createDir() {
-        String path = "./output/english/";
-        String str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        for (char c : str.toCharArray()) {
-            new File(path + String.valueOf(c)).mkdirs();
+    public static String getTranslateStr(String word) throws Exception {
+        Word translate = getTranslate(word);
+        System.out.println(JSON.toJSONString(translate));
+        if (translate == null) {
+            return "该词条暂未被收录";
         }
-        System.out.println(str.length());
+        return translate.getChinese();
     }
 
-    @Test
-    public void downloadAudio() throws IOException {
-        String url = "http://dict.youdao.com/dictvoice?type=0&audio=";
-        CloseableHttpClient httpClient = HttpClientBuilder.create().build();
-        List<String> list = FileUtils.readLines(new File("./input/englishWorld.txt"), StandardCharsets.UTF_8);
-
-        for (String word : list) {
+    public static boolean downloadAudio(String word, String path) {
+        String backupPath = getBackupPath(word);
+        try {
+            String url = "http://dict.youdao.com/dictvoice?type=0&audio=";
+            CloseableHttpClient httpClient = HttpClientBuilder.create().build();
+            System.out.println("error:"+ word);
             HttpGet httpGet = new HttpGet(url + word);
             CloseableHttpResponse response = httpClient.execute(httpGet);
-            System.out.println(response.toString());
             HttpEntity entity = response.getEntity();
-            System.out.println(entity.getContentLength());
-            System.out.println(entity.getContentType().getValue());
-            String first = word.substring(0, 1).toUpperCase(Locale.ROOT);
-            FileOutputStream fos = new FileOutputStream("./output/english/" + first + File.separator + word + ".mp3");
+            FileOutputStream fos = new FileOutputStream(path);
             fos.write(EntityUtils.toByteArray(entity));
             fos.flush();
             fos.close();
+            FileUtils.copyFile(new File(path), new File(backupPath));
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
         }
+    }
 
+    public static boolean copyPath(String word, String path) throws IOException {
+        String backupPath = getBackupPath(word);
+        File backUpAudio = new File(backupPath);
+        if (backUpAudio.exists()) {
+            FileUtils.copyFile(new File(backupPath), new File(path));
+            return true;
+        }
+        return false;
+    }
 
+    private static String getBackupPath(String word) {
+        String first = word.substring(0, 1).toUpperCase(Locale.ROOT);
+        return "./output/english/" + first + File.separator + word + ".mp3";
     }
 
 

@@ -1,0 +1,7 @@
+letter|standard|type|audio|baseWords|moreWords
+a|ɒ|6|a.mp3|wallet,wander,what|wallet,wander,what,quality,washboard,warrant,wasp,whatever,qualification,quarantine,swap,qualm
+a|ɑ:|6|a_o.mp3|class,after,plant|class,after,plant,task,grasp,fast,path,father,classify,passport,mask,rather,basket,basketball,advance,staff,afternoon,France,plastic
+o|aʊ|6|o.mp3|soldier,poll,cold|soldier,poll,cold,host,poll,almost,postpone,old,bold,unfold,scold,ghost,postcard,hold,gold,fold
+o|ʌ|6|o_a.mp3|cover,glove,come|cover,glove,come,none,cover,other,honey,front,income,comfort,otherwise,recover,honeymoon,ton,lover,other,glove,something
+o|u:|6|o_u.mp3|who,move,lose|who,move,lose,prove,who,two,loser,remove,whom,whose,to,movie,movement
+u|u:|6|u.mp3|ruler,lunar,rule|ruler,lunar,rule,juice,true,jubilee,flu,prudent,rue,July,June,rule,true,lure,rumour,blue,conclude
